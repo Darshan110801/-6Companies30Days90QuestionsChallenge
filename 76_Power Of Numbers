@@ -1,0 +1,23 @@
+class Solution{
+    public:
+    //You need to complete this fucntion
+    
+    long long power(int N,int R)
+    {
+        long long MOD =1000000007;
+       
+      long long ans = 1;
+      long long to_mul = N;
+      while(R | 0)
+      {
+          if(R & 1){
+              ans = (ans*to_mul)%MOD;
+          }
+          to_mul = (to_mul*to_mul)%MOD;
+          R = R >> 1;
+      }
+      return ans;
+        
+    }
+
+};
